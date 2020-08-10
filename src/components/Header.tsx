@@ -9,9 +9,19 @@ interface NavLinkProps {
   fontWeight?: string;
 }
 
+const StyledHeader = styled.header`
+  background: ${props => props.theme.colors.primary};
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: ${props => props.theme.colors.secondary};
+  height: ${props => props.theme.heights.navbarHeight};
+`;
+
 const NavLink = styled(Link)`
-  color: #222;
   font-size: 2rem;
+  color: ${props => props.theme.colors.secondary};
   font-weight: ${(props: NavLinkProps) => props.fontWeight || "normal"};
   line-height: 1;
   margin: 0 1rem 0 0;
@@ -19,7 +29,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
 
   &.current-page {
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid ${props => props.theme.colors.secondary};
   }
 
   &:last-of-type {
@@ -27,24 +37,26 @@ const NavLink = styled(Link)`
   }
 `;
 
-const StyledHeader = styled.header`
-  background: #eee;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem calc((100vw - 550px - 0.5rem) / 2);
-`;
-
 const StyledNav = styled.nav`
   margin-top: 0;
 `;
 
+const Logo = styled(Link)`
+  color: ${props => props.theme.colors.secondary};
+  font-size: 4rem;
+  font-weight: "bold";
+  line-height: 1;
+  text-decoration: none;
+  margin-right: auto;
+`
+
+
 const Header: React.FC<IProps> = props => {
   return (
     <StyledHeader>
-      <NavLink to="/" fontWeight="bold">
+      <Logo to="/">
         Ali Ahmed
-      </NavLink>
+      </Logo>
       <StyledNav>
         <NavLink to="/" activeClassName="current-page">
           Home

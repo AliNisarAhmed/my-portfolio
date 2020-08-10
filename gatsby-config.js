@@ -3,6 +3,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ali\'s Portfolio',
     description: 'Welcome to Ali Ahmed\'s portfolio',
+    bioShort: 'Web & Mobile Applications Developer',
   },
   plugins: [
     'gatsby-plugin-emotion',

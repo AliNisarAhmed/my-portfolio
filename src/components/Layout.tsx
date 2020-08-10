@@ -4,12 +4,19 @@ import styled from '@emotion/styled';
 import Helmet from "react-helmet";
 import Header from "./Header";
 import useSiteMetadata from "../hooks/useSiteMetadata";
+import { ThemeProvider } from 'emotion-theming';
+import { theme } from "../theme";
 
 interface IProps {}
 
 const StyledMain = styled.main`
   margin: 2rem auto;
-  max-width: 550px;
+  margin-top: 0;
+  height: calc(100vh - ${props => props.theme.heights.navbarHeight});
+
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
 `
 
 const Layout: React.FC<IProps> = ({ children }) => {
@@ -17,7 +24,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Global
         styles={css`
           * {
@@ -32,7 +39,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
           html,
           body {
             margin: 0;
-            color: #555;
+            color: ${theme.colors.primary};
             font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
               Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
             font-size: 10px;
@@ -49,7 +56,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
           h4,
           h5,
           h6 {
-            color: #222;
+            color: ${theme.colors.primary};
             line-height: 1.1;
 
             + * {
@@ -73,7 +80,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
       </Helmet>
       <Header />
       <StyledMain>{children}</StyledMain>
-    </>
+    </ThemeProvider>
   );
 };
 
