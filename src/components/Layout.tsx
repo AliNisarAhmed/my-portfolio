@@ -3,6 +3,7 @@ import { Global, css } from "@emotion/core";
 import styled from '@emotion/styled';
 import Helmet from "react-helmet";
 import Header from "./Header";
+import useSiteMetadata from "../hooks/useSiteMetadata";
 
 interface IProps {}
 
@@ -12,6 +13,9 @@ const StyledMain = styled.main`
 `
 
 const Layout: React.FC<IProps> = ({ children }) => {
+
+  const { title, description } = useSiteMetadata();
+
   return (
     <>
       <Global
@@ -64,8 +68,8 @@ const Layout: React.FC<IProps> = ({ children }) => {
       />
       <Helmet>
         <html lang="en" />
-        <title>My Portfolio</title>
-        <meta name="description" content="Description" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
       </Helmet>
       <Header />
       <StyledMain>{children}</StyledMain>
