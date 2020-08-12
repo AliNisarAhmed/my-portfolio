@@ -4,6 +4,9 @@ export const theme = {
     secondary: "white",
     tertiary: "gray",
   },
+  widths: {
+    contentWidth: '1200px'
+  },
   heights: {
     navbarHeight: '6rem'
   },

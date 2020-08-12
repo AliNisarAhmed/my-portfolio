@@ -10,12 +10,11 @@ import { theme } from "../theme";
 interface IProps {}
 
 const StyledMain = styled.main`
-  margin: 2rem auto;
   margin-top: 0;
   height: calc(100vh - ${props => props.theme.heights.navbarHeight});
 
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 3fr 2fr;
   grid-template-columns: 1fr 1fr;
 `
 
@@ -30,10 +29,6 @@ const Layout: React.FC<IProps> = ({ children }) => {
           * {
             box-sizing: border-box;
             margin: 0;
-          }
-
-          * + * {
-            margin-top: 1.8rem;
           }
 
           html,
