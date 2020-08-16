@@ -1,7 +1,8 @@
-import React from "react"
-import Layout from "../components/Layout"
-import Hero from "../components/Hero"
-import Intro from "../components/Intro"
+import React from "react";
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import Intro from "../components/Intro";
+import "../styles/styles.css";
 
 export default function Home() {
   return (
@@ -9,5 +10,5 @@ export default function Home() {
       <Hero />
       <Intro />
     </Layout>
-  )
+  );
 }
