@@ -5,8 +5,8 @@ interface IProps {}
 
 const Intro: React.FC<IProps> = props => {
   return (
-    <IntroContainer>
-      <IntroSection>
+    <div>
+      <section>
         <div>
           <h2>About me</h2>
           <p>
@@ -23,23 +23,9 @@ const Intro: React.FC<IProps> = props => {
             <li>Email</li>
           </ul>
         </div>
-      </IntroSection>
-    </IntroContainer>
+      </section>
+    </div>
   );
 };
-
-const IntroSection = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-
-  border: 1px solid red;
-`;
-
-const IntroContainer = styled.section`
-  grid-column: 1/ -1;
-	margin: 0 auto;
-`;
 
 export default Intro;

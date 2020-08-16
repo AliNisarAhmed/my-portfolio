@@ -6,7 +6,7 @@ module.exports = {
     bioShort: 'Web & Mobile Applications Developer',
   },
   plugins: [
-    'gatsby-plugin-emotion',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
