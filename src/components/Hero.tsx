@@ -4,12 +4,12 @@ import Image from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
-interface IProps {}
+interface IProps {
+  className: string;
+}
 
-const Hero: React.FC<IProps> = props => {
-
+const Hero: React.FC<IProps> = ({ className }) => {
   const { bioShort } = useSiteMetadata();
-
 
   const data = useStaticQuery(graphql`
     query {
@@ -24,10 +24,15 @@ const Hero: React.FC<IProps> = props => {
   `);
 
   return (
-    <div>
-      <Image fixed={data.image.sharp.fixed} alt="Ali's profile picture" fadeIn={true} />
-      <h1>{bioShort}</h1>
-    </div>
+    <section className={className}>
+      <Image
+        fixed={data.image.sharp.fixed}
+        alt="Ali's profile picture"
+        fadeIn={true}
+        className="rounded-full border-4 border-blue-400"
+      />
+      <h1 className="text-center">{bioShort}</h1>
+    </section>
   );
 };
 

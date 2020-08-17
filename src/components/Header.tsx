@@ -1,12 +1,15 @@
 import React from "react";
 import NavLink from "./NavLink";
+import Logo from "./Logo";
 
-interface IProps {}
+interface IProps {
+  className: string;
+}
 
-const Header: React.FC<IProps> = props => {
+const Header: React.FC<IProps> = ({ className }) => {
   return (
-    <header className="flex">
-      <NavLink to="/">Ali Ahmed</NavLink>
+    <header className={className}>
+      <Logo>Ali Ahmed</Logo>
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/projects">Projects</NavLink>

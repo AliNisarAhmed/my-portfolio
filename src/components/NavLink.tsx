@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const NavLink: React.FC<IProps> = ({ to, children }) => {
-  return <Link to={to} className="font-bold ml-4">{children}</Link>;
+  return <Link to={to} className="font-bold ml-4" activeClassName=".active">{children}</Link>;
 };
 
 export default NavLink;
