@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.heading-2 {
+	@apply text-xl text-center block self-stretch;
+}

@@ -9,14 +9,14 @@ const Layout: React.FC<IProps> = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
   return (
-    <div className="grid grid-cols-1 grid-rows-layout bg-gray-900 text-white">
+    <div className="grid grid-cols-1 grid-rows-layout bg-gray-900 text-white font-sans tracking-wider">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
       <Header className="row-span-1 border-b-2 border-blue-300 flex items-center p-4" />
-      <main className="row-end-auto border-2 border-blue-300 container mx-auto">{children}</main>
+      <main className="row-span-1 border-2 border-blue-300 container mx-auto">{children}</main>
     </div>
   );
 };

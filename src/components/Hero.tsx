@@ -31,7 +31,8 @@ const Hero: React.FC<IProps> = ({ className }) => {
         fadeIn={true}
         className="rounded-full border-4 border-blue-400"
       />
-      <h1 className="text-center">{bioShort}</h1>
+      <h1 className="text-6xl">Ali Ahmed</h1>
+      <h2 className="text-center text-4">{bioShort}</h2>
     </section>
   );
 };

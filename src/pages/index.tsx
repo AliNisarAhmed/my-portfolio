@@ -7,9 +7,9 @@ import "../styles/main.css";
 export default function Home() {
   return (
     <Layout>
-      <section className="grid grid-cols-1 grid-rows-2">
-        <Hero className="self-center flex flex-col items-center row-span-1" />
-        <Intro className="row-end-auto flex-1 border-2 border-blue-300 self-stretch grid grid-cols-2" />
+      <section className="h-full flex flex-col items-center justify-center">
+        <Hero className="flex-1 flex flex-col items-center justify-end row-span-1 mb-20" />
+        <Intro className="flex-1 border-2 border-blue-300 grid grid-cols-2 p-6" />
       </section>
     </Layout>
   );
