@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "@emotion/styled";
 import Image from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import useSiteMetadata from "../hooks/useSiteMetadata";

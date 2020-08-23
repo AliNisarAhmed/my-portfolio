@@ -15,8 +15,8 @@ const Layout: React.FC<IProps> = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <Header className="row-span-1 border-b-2 border-blue-300 flex items-center p-4" />
-      <main className="row-span-1 border-2 border-blue-300 container mx-auto">{children}</main>
+      <Header className="row-span-1 flex items-center p-4" />
+      <main className="row-span-1 container mx-auto">{children}</main>
     </div>
   );
 };

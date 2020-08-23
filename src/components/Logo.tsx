@@ -7,7 +7,7 @@ interface IProps {
 
 const Logo: React.FC<IProps> = ({ children }) => {
 	return (
-		<Link to="/" className="font-bold text-2xl mr-auto">
+		<Link to="/" className="font-bold text-2xl mr-auto uppercase">
 			{children}
 		</Link>
 	);

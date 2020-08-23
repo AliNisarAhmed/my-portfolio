@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .heading-2 {
-	@apply text-xl text-center block self-stretch;
+	@apply text-3xl text-center block self-stretch;
+}
+
+.explain {
+	@apply border-2 border-blue-300;
 }
